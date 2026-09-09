@@ -32,6 +32,11 @@ jobs:
           repository: ${{ inputs.repo }}
           path: YouMod
 
+      - name: Setup Go
+        uses: actions/setup-go@v5
+        with:
+        go-version: 'stable'
+
       - name: Install dependencies
         run: brew install make ldid
 
